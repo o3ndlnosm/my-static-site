@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3  # 更新到最新版本
+      uses: actions/checkout@v3  # 使用最新版本
 
     - name: Set up Node.js
-      uses: actions/setup-node@v3  # 更新到最新版本
+      uses: actions/setup-node@v3  # 使用最新版本
       with:
         node-version: '20'  # 使用最新的 Node.js 版本
 
@@ -25,7 +25,7 @@ jobs:
       run: npm run build
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v4  # 更新到最新版本
+      uses: peaceiris/actions-gh-pages@v4  # 使用最新版本
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
